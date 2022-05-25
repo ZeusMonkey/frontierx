@@ -1,0 +1,10 @@
+{
+  "mainnet": {
+    "chainId": 1,
+    "rpc": "https://mainnet.infura.io/v3/ab8e13055fc9443c9fd6f7e94cb01ea1"
+  },
+  "testnet": {
+    "chainId": 3,
+    "rpc": "https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
+  }
+}

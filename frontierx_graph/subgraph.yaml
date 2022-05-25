@@ -1,0 +1,26 @@
+specVersion: 0.0.2
+description: FNFT
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: FNFT
+    network: ropsten
+    source:
+      address: "0x83EBbBD6227650B8b2b174093c99A6BF73a2013A"
+      abi: FNFT
+      startBlock: 12297068
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      file: ./src/nft.ts
+      entities:
+        - Account
+        - NFT
+      abis:
+        - name: FNFT
+          file: ./abis/nft.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer

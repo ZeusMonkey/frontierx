@@ -1,0 +1,13 @@
+
+type Account @entity {
+  id: ID!
+
+  nfts: [NFT]! @derivedFrom(field: "account")
+}
+
+type NFT @entity {
+  id: ID!
+
+  account: Account!
+  tokenId: BigInt!
+}

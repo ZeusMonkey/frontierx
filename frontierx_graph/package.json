@@ -1,0 +1,15 @@
+{
+  "name": "pix-subgraph",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "codegen": "graph codegen --debug --output-dir src/entities/",
+    "build": "graph build",
+    "deploy": "graph deploy --product hosted-service markdev07/frontier-nft-graph",
+    "auth": "graph auth --product hosted-service ec003bb3d0b04afc976c719d9f3938f1"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.21.1",
+    "@graphprotocol/graph-ts": "0.20.0"
+  }
+}

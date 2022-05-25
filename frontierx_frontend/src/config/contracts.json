@@ -1,0 +1,10 @@
+{
+  "mainnet" : {
+    "fnft": "0x0",
+    "ftoken": "0x0"
+  },
+  "testnet" : {
+    "fnft": "0x83EBbBD6227650B8b2b174093c99A6BF73a2013A",
+    "ftoken": "0x6dA3274e3ec79053E9C0D77E3616C7477559920b"
+  }
+}
