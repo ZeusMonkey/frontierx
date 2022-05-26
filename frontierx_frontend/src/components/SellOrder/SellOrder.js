@@ -23,7 +23,11 @@ const useStyles = makeStyles((theme) => ({
     height: 200
   },
   imageWrapper: {
-    height: 150,
+    height: 130,
+    textAlign: 'center'
+  },
+  idWrapper: {
+    height: 20,
     textAlign: 'center'
   },
   button: {
@@ -79,11 +83,13 @@ function SellOrder({nftImg, nftId, order, nprice, orderHandler}) {
     const res = await API.removeOrder({
       tokenId: nftId
     });
-    orderHandler();
 
-    setIsPending(false);
-    alert('order completed!');
-    setOpen(false);
+    setTimeout(() => {
+      orderHandler();
+      setIsPending(false);
+      alert('order completed!');
+      setOpen(false);
+    }, 15000);
   }
 
   const handleClose = () => {
@@ -103,6 +109,9 @@ function SellOrder({nftImg, nftId, order, nprice, orderHandler}) {
     <Grid container className={classes.cardWrapper}>
       <Grid item md={12} className={classes.imageWrapper} justifyContent="center">
         <img className={classes.cardImg} alt="nft" src={nftImg} />
+      </Grid>
+      <Grid item md={12} className={classes.idWrapper} justifyContent="center">
+        <span>Token ID: {nftId}</span>
       </Grid>
       <Grid item md={12} className={classes.buttonWrapper} justifyContent="center">
         <Button

@@ -60,7 +60,7 @@ function Home() {
 
   const fetchSellOrders = async () => {
     const res = await API.findSellOrders({account});
-    if (res && res.data.length > 0) {
+    if (res && res.data) {
       let _nfts = [];
       for (const nft of res.data) {
         _nfts.push({
@@ -79,7 +79,7 @@ function Home() {
       query: GET_NFTS,
       variables: {account: account.toLowerCase()}
     });
-
+    
     if (data && data.accounts && data.accounts.length > 0) {
       let ids = [];
       for (const nft of data.accounts[0].nfts) {

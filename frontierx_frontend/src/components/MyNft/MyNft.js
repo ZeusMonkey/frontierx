@@ -22,7 +22,11 @@ const useStyles = makeStyles((theme) => ({
     height: 200
   },
   imageWrapper: {
-    height: 150,
+    height: 130,
+    textAlign: 'center'
+  },
+  idWrapper: {
+    height: 20,
     textAlign: 'center'
   },
   button: {
@@ -129,6 +133,9 @@ function MyNft({nftImg, nftId, nprice, updatePrice}) {
     <Grid container className={classes.cardWrapper}>
       <Grid item md={12} className={classes.imageWrapper}>
         <img className={classes.cardImg} alt="nft" src={nftImg} />
+      </Grid>
+      <Grid item md={12} className={classes.idWrapper}>
+        <span>Token ID: {nftId}</span>
       </Grid>
       <Grid item md={12} className={classes.buttonWrapper}>
         {

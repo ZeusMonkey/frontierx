@@ -1,7 +1,7 @@
 import BigNumber from 'bignumber.js'
 
 class Api {
-  baseUrl = 'http://127.0.0.1:8000/order';
+  baseUrl = 'https://frontierx.herokuapp.com/order';
   
   constructor() {
   }
